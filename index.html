@@ -1,69 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unnat Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-	<header>
-		<h1 class="logo">My portfolio</h1>
-		<nav>
-			<a href="#home">Home</a>
-			<a href="#about">About</a>
-			<a href="#projects">Projects</a>
-			<a href="#contact">COntact</a>
-		</nav>
-	</header>
 
-	<section id="home" class="home">
-		<h2>Welcome my fellas</h2>
-		<p> this is my personal portfolio website</p>
-	</section>
+    <!-- HEADER -->
+    <header>
+        <h1 class="logo">Unnat</h1>
+        <nav aria-label="Main Navigation">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-	<section id="about" class="about">
-		<h2>About me </h2>
-		<p>welcome everyone. Bonjour this is about me . </p>
-	</section>
+    <main>
 
-	<section id="project">
-		     <div class="project-card">
-            <h3>Weather App</h3>
-            <p>A weather app built with HTML, CSS, and JavaScript.</p>
-        </div>
+        <!-- HERO / HOME -->
+        <section id="home" class="home">
+            <img src="images/profile.jpg" alt="Profile photo of Unnat" class="profile-img">
+            <h2>Hello, I’m <span class="highlight">Unnat</span> 👋</h2>
+            <p>Welcome to my personal portfolio website.</p>
+        </section>
 
-        <div class="project-card">
-            <h3>Tic-Tac-Toe Game</h3>
-            <p>A Python game with leaderboard and file handling.</p>
-        </div>
+        <!-- ABOUT -->
+        <section id="about" class="about">
+            <h2>About Me</h2>
+            <p>I am a beginner developer learning HTML, CSS, JavaScript, Python, and Java. 
+               This portfolio shows my journey and the cool stuff I’ve built!</p>
+        </section>
 
-        <div class="project-card">
-            <h3>Caesar Cipher</h3>
-            <p>Python encryption/decryption tool with file support.</p>
-        </div>
-        <div>
-        	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpVGBoIAFLjgpTxN7B7XmeXvFczNfJbWn6mxxFI7zYrLqZGnSuRnKN1_g&s" >
-        </div>
-    </section>
+        <!-- PROJECTS -->
+        <section id="projects" class="projects">
+            <h2>My Projects</h2>
 
-    <section id="contact">
-    	<h2>Contact</h2>
-    	<form>
-    		<label>Name:</label>
-    		<input type="text" placeholder="enter your name ">
+            <div class="project-container">
 
-    		<label>Email</label>
-    		<input type="Email" placeholder="email" >
+                <article class="project-card">
+                    <img src="images/weather.jpg" alt="Weather App Screenshot">
+                    <h3>🌦️ Weather App</h3>
+                    <p>A real-time weather app using JavaScript and live API data.</p>
+                </article>
 
-    		<label>Message:</label>
-    		<textarea placeholder="Write your message "></textarea>
-    	</form>
-    	
-    </section>
-<footer>
-        <p>© 2025 My Portfolio | Created by Unnat</p>
+                <article class="project-card">
+                    <img src="images/tictactoe.jpg" alt="Tic Tac Toe Screenshot">
+                    <h3>❌⭕ Tic-Tac-Toe</h3>
+                    <p>A Python game with a leaderboard and file storage.</p>
+                </article>
+
+                <article class="project-card">
+                    <img src="images/caesar.png" alt="Caesar Cipher Tool Screenshot">
+                    <h3>🔐 Caesar Cipher</h3>
+                    <p>Encrypt and decrypt messages instantly using Python logic.</p>
+                </article>
+
+              
+
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="contact">
+            <h2>Contact Me</h2>
+
+            <form>
+                <label for="name">Name</label>
+                <input id="name" type="text" placeholder="Your name" required>
+
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="Your email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" placeholder="Write something..." required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© <span id="year"></span> • Created by Unnat</p>
     </footer>
+
+    <script>
+        // Dynamic year update
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 
 </body>
 </html>
-
-
-
